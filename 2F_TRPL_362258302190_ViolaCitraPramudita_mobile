@@ -1,0 +1,152 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  List<String> CartoonsImageUrls = [
+    // Menyesuaikan jumlah link gambar sesuai dengan baris yang ada
+    "https://bisniswisata.co.id/wp-content/uploads/2020/06/gambar-satu-youtube.jpg",
+    "https://e1.pxfuel.com/desktop-wallpaper/826/36/desktop-wallpaper-dora-cartoon-dora.jpg",
+    "https://assets.kompasiana.com/items/album/2022/08/05/spongebob-jellyfishing-by-athenatt-da6y2g-62ec8cd408a8b514d7326582.jpg?t=o&v=740&x=416",
+    "https://i.pinimg.com/564x/4d/e0/39/4de039f0773386fdeb8b1f131b1b5029.jpg",
+    "https://e0.pxfuel.com/wallpapers/881/835/desktop-wallpaper-strawberry-shortcake-cartoons-in-2019-strawberry-shortcake-strawberries-cartoon.jpg",
+    "https://img.inews.co.id/media/600/files/networks/2022/06/30/25be3_upin.jpg",
+    "https://i.postimg.cc/zfk8bK0L/1500x1500-83a0034fc64f4a8be7d7bc81636afe6f5061f0ca73cf9badfd9b6209.jpg",
+    "https://e1.pxfuel.com/desktop-wallpaper/795/1024/desktop-wallpaper-details-about-disney-princess-princess-sofia-sofia-the-first.jpg",
+    "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1590455428/go4c2dvipmmt0b93gdxi.png",
+    "https://3.bp.blogspot.com/-c6LYrQFwaVA/VFTNCHr4F4I/AAAAAAAAAv4/dq8dN81xV7c/s1600/Masha%2BAnd%2BThe%2BBear.png",
+    "https://cdn.idntimes.com/content-images/community/2020/04/aang-917cdb2f3d580942c63273e694947ab2_600x400.jpg",
+    "https://sdnpuspiptek.files.wordpress.com/2011/06/kartun-handy-manny-1.jpg?w=1024",
+    "https://vignette.wikia.nocookie.net/love-couples/images/1/15/Mickey_and_Minnie_Mouse.png/revision/latest?cb=20150420182223",
+    "https://i.pinimg.com/564x/31/1e/bf/311ebf78d5818c444e880aaa1b4495f9.jpg",
+    "https://www.kissfmjember.com/wp-content/uploads/2016/01/Adit-dan-Sopo-Jarwo-padikomputer.jpg",
+    "https://cdn1-production-images-kly.akamaized.net/vBHAT3uUo83T1W0c0q1Yp8QHTfE=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3111527/original/094671000_1587729326-Keluarga_Somat_Landscape.jpg",
+    "https://static.wixstatic.com/media/c036aa_a8b3b1fb71e3457bb2cb6b80582b76c7~mv2.png/v1/fill/w_640,h_518,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c036aa_a8b3b1fb71e3457bb2cb6b80582b76c7~mv2.png",
+    "https://i.pinimg.com/236x/ec/43/09/ec430989256ca79698ad4cd50b05546f--sheriff-callies-wild-west-watch-movies.jpg",
+    "https://cdn0-production-images-kly.akamaized.net/Dr_ACghlqEl2EiTgPUIzeGTIaMc=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3624648/original/009890600_1636172990-202010201120-main.jpg",
+    "https://cdn1-production-images-kly.akamaized.net/Ub7pJzOcjsabp9WPoYE45FRSH10=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/926057/original/020156700_1436610918-film_chibi_marukoedit-1.jpg",
+  ];
+
+  List<String> cartoonslist = [
+    "George",
+    "Dora the Explorer",
+    "Spongebob SquarePants",
+    "Doraemon",
+    "Strawberry Shortcake",
+    "Upin & Ipin",
+    "Scooby-Doo",
+    "Shofia the First",
+    "Tom & Jerry",
+    "Marsha & the Bear",
+    "Avatar",
+    "Handy Manny",
+    "Mickey and Minnie Mouse",
+    "Shaun the Sheep",
+    "Adit dan Sopo Jarwo",
+    "Keluarga Somat",
+    "Nussa",
+    "Sheriff Kelly",
+    "Hachi",
+    "Maruko-chan",
+  ];
+
+  List<String> Creators = [
+    "H. A. Rey, Margret Rey, Joe Fallon",
+    "Chris Gifford, Valerie Walsh, Eric Weiner",
+    "Stephen Hillenburg",
+    "Fujiko F. Fujio",
+    "Barbi Sargent",
+    "Ainon binti Ariff, Burhanuddin Radzi",
+    "Joe Ruby, Iwao Takamoto",
+    "Craig Gerber",
+    "Gene Deitch",
+    "Andrei Dobrunov, Oleg Kuzovkov, dan Dmitry Loveiko",
+    "Bryan Konietzko",
+    "Manuel Manny Garcia",
+    "Walt Disney",
+    "Nick Park, Richard Starzak, David Fine",
+    "Muhammad Bramtalaras, Pratiwi Utami",
+    "M. Syamsul Hidayat Essther IC Handoko Daniel. J",
+    "Mario Irwinsyah",
+    "George Evelyn, Holly Huckins, dan Denis Morella",
+    "Tatsunoko Productions",
+    "Momoko Sakura",
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xff3ca0d2),
+          title: Center(
+            child: Text(
+              "Cartoons 2000-an",
+              style: TextStyle(color: Color(0xffffffff)),
+            ),
+          ),
+          leading: IconButton(
+            icon: Icon(
+              Icons.home, // Icon "Home"
+              color: Color(0xffffffff), // Warna
+            ),
+            onPressed: () {},
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(
+                Icons.menu, // Icon garis tiga (hamburger menu)
+                color: Color(0xffffffff), // Warna
+              ),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        backgroundColor: Color(0xffdef4f4), // Warna latar belakang
+        body: ListView.builder(
+          itemCount: CartoonsImageUrls.length,
+          itemBuilder: (context, index) {
+            return Column(
+              children: [
+                ListTile(
+                  leading: CircleAvatar(
+                    radius: 25, // Menyesuaikan radius
+                    backgroundImage: NetworkImage(CartoonsImageUrls[index]),
+                  ),
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        cartoonslist[index], // Judul lagu berdasarkan indeks
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold, // Teks huruf tebal
+                        ),
+                      )
+                    ],
+                  ),
+                  subtitle: Text(
+                    Creators[index], // Penyanyi berdasarkan indeks
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
